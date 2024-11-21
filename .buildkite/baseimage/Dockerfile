@@ -7,7 +7,7 @@ ENV LANGUAGE=en_US:en
 
 # Set environment variables
 ENV JAVA_VERSION=17
-ENV GRADLE_VERSION=8.0
+ENV GRADLE_VERSION=8.11.1
 ENV GRADLE_HOME=/opt/gradle
 ENV JAVA_HOME=/usr/lib/jvm/java-${JAVA_VERSION}-openjdk-amd64
 ENV PATH=${GRADLE_HOME}/bin:${JAVA_HOME}/bin:${PATH}
