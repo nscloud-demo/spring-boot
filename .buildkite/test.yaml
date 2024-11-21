@@ -13,3 +13,6 @@ steps:
 
   - label: ":gradle: Build"
     command: "gradle build"
+
+  - label: ":gradle: Build"
+    command: sleep 1000
