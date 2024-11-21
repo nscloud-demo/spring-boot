@@ -1,13 +1,15 @@
 
+agents:
+  nsc-experimental-git-mirror: "true"
+  nsc-cache-tag: buildkite:springboot/demo
+  nsc-cache-size: 50g
+  nsc-experimental-containerd-cache-relative-path: containers
+  nsc-base-image-ref: nscr.io/01gr1g2rpb7ahzddy3f227exq9/gradle-baseimage:v1nscr.io/01gr1g2rpb7ahzddy3f227exq9/gradle-baseimage@sha256:62c3c37d7199e77fb57fbfe488fd2c237808518be2670027dd05d9b28125bda5
+  nsc-shape: 8x16
+
 steps:
   - label: ":gradle: Test"
     command: "gradle test"
-    plugins:
-      - docker#v3.5.0:
-          image: "gradle:8-jdk17"
 
   - label: ":gradle: Build"
     command: "gradle build"
-    plugins:
-      - docker#v3.5.0:
-          image: "gradle:8-jdk17"
