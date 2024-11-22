@@ -6,6 +6,7 @@ agents:
   nsc-experimental-containerd-cache-relative-path: containers
   nsc-base-image-ref: nscr.io/01gr1g2rpb7ahzddy3f227exq9/gradle-baseimage@sha256:f1fa69211ff3c5f28a3a0b1e0b2b7bc1686526e7e4788f5455585537621f9952
   nsc-shape: 8x16
+  namespace-experiments: gradle.init_script.path=~/.gradle/init.d/mirror.init.gradle,gradle.init_script.distribution_url=https://services.gradle.org/distributions/test,gradle.init_script.maven.mirror_url=https://test
 
 steps:
   - label: ":gradle: Test"
